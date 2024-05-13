@@ -1,0 +1,123 @@
+<Meta CharSet= 'utf-8'/>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet " /> 
+ <link rel="stylesheet" type="text/css"  href="/css/index.css">
+<title>'Logln'</title>
+ <script>
+ window.onload  = function () {
+ var btn = document.getElementById('btn'); 
+ 
+var inputs = document.getElementsByTagName('input'); 
+  
+
+// btn.addEventListener ( 'click' , {
+btn.addEventListener('click' , function () { 
+  var xhr = new XMLHttpRequest(); 
+ 
+
+   xhr.open('POST', '/login');
+
+
+    var userData = {
+     username: inputs[0].value, 
+     password: inputs[1].value 
+   }; 
+   
+  
+  alert(inputs[0].value); 
+  alert(inputs[1].value); 
+  
+  xhr.setRequestHeader ( 'Content-type' , 'application/json' )
+  // alert(userData); 
+  // console.log(userData);
+ xhr.send(JSON.stringify(userData)); 
+// xhr.send(JSON.stringify({name:"John Rambo", time:"2pm"}));
+ 
+ // alert(name); 
+   xhr.onload = function () {
+   alert(this.responseText); 
+   };
+ 
+ 
+   xhr_onerror = function () {
+   alert('server error!');
+   } 
+ });
+ 
+
+
+
+
+var btn2 = document.getElementById('btn2');
+
+btn2.onclick = function() {
+   var xhr = new XMLHttpRequest(); 
+   xhr.open('GET', '/logout');
+   xhr.send();
+   xhr.onload = function(){
+      alert(this.responseText);
+	  };
+};
+
+
+var btns = document.querySelector('.btns');
+btns.onclick = function(e){
+    if (!e.target.dataset.page) return false;
+	var target = e.target.dataset.page;
+	 alert(target);
+	var xhr = new XMLHttpRequest(); 
+    xhr.open('GET', '/'+target);
+    xhr.send();
+    xhr.onload = function(){
+     window.location.href="/"+target
+	  };
+
+};
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+</script> 
+</head> 
+
+
+<body  > <div class="panel well" style="width: 350px; padding: 25px; text-align: center"> 
+  <h2 class="h" style="margin-bottom: 35px">Log in</h2>
+   <form  name="login" >
+    <div class="form-grour"> 
+     <label  class="headline" >Username</label> <input class="form-control input-lg" type="text" id="login" />
+	 </div> 
+	 <div class="form-grour">
+       <label>Password</label> 
+	    <input class="form-control input-lg" type="text" id="password" />
+		</div>
+		<div class="form-group"> 
+		        <input type="button" value="Log in" class="btn btn-lg btn-success" id="btn" /> 
+			    <button value ="Log out" class ="btn btn-lg btn-danger" id ="btn2">Log out</button>
+			 </div> 
+			</form>
+		</div>
+		
+		<div class="panel btns">
+		<H2>PAGES</H2>
+		<button data-page ="admin" class ="btn btn-info btn-lg">ADMIN PAGE</button>
+		<button data-page ="user" class ="btn btn-success btn-lg">User PAGE</button>
+		<button data-page ="guest" class ="btn btn-warning btn-lg">Guest PAGE</button>
+		
+		
+		</div>
+		
+		
+</body>
+</html>   
+   
+   
