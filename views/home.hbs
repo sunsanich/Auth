@@ -1,0 +1,70 @@
+
+
+<html>
+<head>
+    <title  >Главн страница</title>
+    <meta charset="utf-8" />
+  
+</head>
+<body>
+
+  <div class="error" >
+  {{#if message}}
+
+  <div id="my-alert" style="text-align: center" class="alert alert-{{message.type}} box bounce-1">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Тут Ваше сообщение  <strong>{{message.intro}}</strong> {{message.message}}
+</div>
+
+  {{/if}}
+
+</div>
+
+
+
+
+  !! {{mess}}
+
+
+   <h1 class="h box bounce-1">{{getTime}}Гая страница</h1>
+	<img src="/images/1.jpg" alt="">
+    <div  >{{getTime}}</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+    
+ 
+  
+        window.setTimeout(function(){
+         
+		 var ale  = document.getElementById('my-alert')
+         if (ale!=null){ ale.style.display='none'}
+		  
+        },5000);
+		
+		
+		
+		
+		
+   
+</script>
+<html>

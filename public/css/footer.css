@@ -1,0 +1,17 @@
+
+.form-signin {
+	
+	padding: 22px 0;
+    left: 120%;
+    margin-left: 27px;
+    height: 231px;
+    margin: 30px auto;
+    width: 250px;
+    position: absolute;
+    z-index: 100;
+	
+}
+.error{
+height: 40px;	
+	 width: 250px;
+};

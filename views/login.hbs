@@ -1,0 +1,73 @@
+
+
+
+ <div class="h form-signin" >
+ 
+<form   name="log" action="/login" method="post" >
+
+  <h2  class= "headline" class="form-signin-heading">Log in</h2>
+ 
+   <div class="error" >
+  {{#if message}}
+
+  <div id="my-alert" style="text-align: center" class="alert alert-{{message.type}} box bounce-1">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Тут Ваше сообщение  <strong>{{message.intro}}</strong> {{message.message}}
+</div>
+
+  {{/if}}
+
+</div>
+
+ 
+     <label >Username  </label></br> 
+     <input type="text" id="inputUsername" name="usrname" class="form-control" placeholder="Email" required></br></br>
+   
+      <label>Password  </label></br> 
+	  <input name="passwrd" class="form-control input-lg" type="text" id="password" placeholder="Pass" /></br>  
+		        </br>
+				 <button value="Log in" class="btn btn-lg btn-success" id="btn" />Login</button></br>  
+			
+  </form> 
+  
+  
+
+  
+			  <div > </br>  
+		      <a  href="/forgot">forgot Pass?</a>
+              <a  href="/register">/Register?</a>
+			  
+			  </div>
+			  
+        <H2>PAGES</H2>
+		 <form  name="log" action="/admin" method="get" >
+		
+		<button data-page ="admin" class ="btn btn-info btn-lg">ADMIN PAGE</button>
+		</form>
+		
+		 <form  name="log" action="/user" method="get" >
+		<button data-page ="user" class ="btn btn-success btn-lg">User PAGE</button>
+		</form>
+			 
+		<form  name="log" action="/guest" method="get" >
+		<button data-page ="guest" class ="btn btn-warning btn-lg">Guest PAGE</button>
+	   </form>
+ </div>
+<script>
+    
+    
+ 
+  
+        window.setTimeout(function(){
+         
+		 var ale  = document.getElementById('my-alert')
+         if (ale!=null){ ale.style.display='none'}
+		  
+        },5000);
+		
+		
+		
+		
+		
+   
+</script>

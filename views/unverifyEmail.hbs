@@ -1,0 +1,52 @@
+
+
+
+<div class="h form-signin" >
+ <div class="error" >
+  {{#if message}}
+
+  <div id="my-alert" style="text-align: center" class="alert alert-{{message.type}} box bounce-1">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Тут Ваше сообщение  <strong>{{message.intro}}</strong> {{message.message}}
+</div>
+
+ {{/if}}
+</div>
+
+
+{{message.intro}}
+{{mailv}}
+
+</br>
+</br> 
+  <h2  class= "headline" class="form-signin-heading">Please Verify Email !</h2>
+   Any function don`t work with out mail verify... 
+ 
+</br> 
+</br> 
+ 
+</div>
+
+
+<form class="h form-signin" name="contin" action="/" method="get"> 
+ 
+  <button   class ="btn btn-info btn-lg">Continue...</button>
+  
+    </form>
+	</br>
+	</br> 
+	 
+	 <form class="h form-signin" name="verifyEmail" action="/sendVerifyEmail" method="post"> 
+
+	  <button  class ="btn btn-info btn-lg">Send Verif Email</button>
+	
+	  </form> </br> </br> 
+	
+
+	
+  
+  
+
+  
+			 
+		

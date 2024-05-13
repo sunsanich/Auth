@@ -1,0 +1,13 @@
+.h {
+	
+font-size: 0.9em; 
+color: red;
+width: 300px; 
+float: left;
+}
+
+.headline {
+	font-size: 0.9em;
+text-transform: uppercase; 
+color: lightblue;
+}

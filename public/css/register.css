@@ -1,0 +1,46 @@
+
+.form-signin {
+	
+	padding: 22px 0;
+    left: 100%;
+    margin-left: 27px;
+    height: 231px;
+    margin: 30px auto;
+    width: 250px;
+    position: absolute;
+    z-index: 100;
+	
+}
+.error{
+height: 40px;	
+	 width: 250px;
+}
+
+
+
+
+
+input {
+	height: 20px;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 3px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
